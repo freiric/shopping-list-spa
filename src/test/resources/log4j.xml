@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Licensed to the Apache blah blah... -->
+<!DOCTYPE log4j:configuration PUBLIC "log4j.dtd" "log4j.dtd"> 
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="stdout" class="org.apache.log4j.ConsoleAppender">
+		<param name="encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{DATE} %-5p %t - %c %m%n" />
+		</layout>
+	</appender>
+
+	<!-- <appender name="infoApp" class="org.apache.log4j.DailyRollingFileAppender"> -->
+	<!-- <param name="Threshold" value="info" /> -->
+	<!-- <param name="File" value="${de.myapp.log4j.infofile}" /> -->
+	<!-- param name="File" value="/var/log/myapp/myapp_info.log" / -->
+	<!-- <param name="DatePattern" value="'.'yyyy-MM-dd" /> -->
+	<!-- <layout class="org.apache.log4j.PatternLayout"> -->
+	<!-- <param name="ConversionPattern" value="%d{DATE} %-5p %t - %m%n" /> -->
+	<!-- </layout> -->
+	<!-- </appender> -->
+
+	<!-- <appender name="warnApp" class="org.apache.log4j.DailyRollingFileAppender"> -->
+	<!-- <param name="Threshold" value="warn" /> -->
+	<!-- <param name="File" value="${de.myapp.log4j.warnfile}" /> -->
+	<!-- <param name="DatePattern" value="'.'yyyy-MM-dd" /> -->
+	<!-- <layout class="org.apache.log4j.PatternLayout"> -->
+	<!-- <param name="ConversionPattern" value="%d{DATE} %-5p %t %c - %m%n" 
+		/> -->
+	<!-- </layout> -->
+	<!-- </appender> -->
+
+	<!-- <appender name="errorApp" class="org.apache.log4j.DailyRollingFileAppender"> -->
+	<!-- <param name="Threshold" value="error" /> -->
+	<!-- param name="File" value="${de.myapp.log4j.errorfile}" / -->
+	<!-- <param name="File" value="/var/log/myapp/myapp_error.log" /> -->
+
+	<!-- <param name="DatePattern" value="'.'yyyy-MM-dd" /> -->
+	<!-- <layout class="org.apache.log4j.PatternLayout"> -->
+	<!-- <param name="ConversionPattern" value="%d{DATE} %-5p %t %c - %m%n" 
+		/> -->
+	<!-- </layout> -->
+	<!-- </appender> -->
+
+	<logger name="de.myapp.ChannelParameterMapper ">
+		<level value="WARN" />
+	</logger>
+	<root>
+		<!-- <priority value="${de.myapp.ariadne.log4j.loglevel}" /> -->
+		<appender-ref ref="stdout" />
+		<!-- <appender-ref ref="infoApp" /> -->
+		<!-- <appender-ref ref="warnApp" /> -->
+		<!-- <appender-ref ref="errorApp" /> -->
+	</root>
+</log4j:configuration>
